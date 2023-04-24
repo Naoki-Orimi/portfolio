@@ -6,10 +6,10 @@ const Header = () => {
     <StyledHeader>
       <Title>DQ風サイト</Title>
       <Navigation>
-        <li>ホーム</li>
         <li>ストーリー</li>
-        <li>キャラクター</li>
-        <li>モンスター</li>
+        <li>ふっかつのじゅもん</li>
+        {/* パルプンテ表示して、ランダムで何か起こす*/}
+        <li>？？？</li>
       </Navigation>
     </StyledHeader>
   );
@@ -20,7 +20,6 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  background-color: #f5deb3;
   padding: 0 20px;
 `;
 

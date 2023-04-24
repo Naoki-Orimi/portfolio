@@ -3,17 +3,18 @@ import styled from "styled-components";
 
 const Footer = () => {
     return (
-      <Foot>
+      <StyledFooter>
         <Message>Footer</Message>
-      </Foot>
+      </StyledFooter>
     );
   };
 
-const Foot = styled.main`
+const StyledFooter = styled.header`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+  height: 60px;
+  padding: 0 20px;
 `;
 
 const Heading = styled.h2`
