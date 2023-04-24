@@ -13,10 +13,6 @@ function App() {
         <Header />
         <Main />
         <Footer />
-        <Routes>
-          <Route path="/sample">aaa</Route>
-        </Routes>
-
       </div>
     </Router>
 
