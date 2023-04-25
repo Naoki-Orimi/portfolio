@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import Portfolio from "../assets/img/Portfolio.png";
 
 const Main = () => {
   return (
     <StyledMain>
-      <Heading>ホーム</Heading>
+      <Heading>
+        <img src={Portfolio}></img>
+      </Heading>
       <Message>ようこそ、DQ風サイトへ！</Message>
     </StyledMain>
   );
@@ -15,6 +18,25 @@ const StyledMain = styled.main`
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
+
+  & img {
+    animation-name: fadeUpAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
 `;
 
 const Heading = styled.h2`
