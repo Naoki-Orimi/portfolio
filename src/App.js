@@ -9,16 +9,15 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <StyledApp>
-        <div className='App'>
-          <Header />
-          <Main />
-          <Footer />
-        </div>
-      </StyledApp>
-    </Router>
-
+    <div className='App'>
+      <Router>
+        <StyledApp>
+            <Header />
+              <Main />
+            <Footer />
+        </StyledApp>
+      </Router>
+    </div>
   );
 }
 

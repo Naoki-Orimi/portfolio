@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Portfolio from "../assets/img/Portfolio.png";
+import SelectModal from "./SelectModal";
 
 const Main = () => {
   return (
     <StyledMain>
+      <Message>テストテスト</Message>
+      {/* <Message>スーパーエンジニアを目指して</Message> */}
       <Heading>
         <img src={Portfolio}></img>
       </Heading>
-      <Message>ようこそ、DQ風サイトへ！</Message>
+      {/* TODO もーだる自体の表示もタイトルが出た後に出す */}
+      <SelectModal>
+      </SelectModal>
     </StyledMain>
   );
 };
@@ -46,6 +51,20 @@ const Heading = styled.h2`
 
 const Message = styled.p`
   font-size: 18px;
+  animation-name: fadeDownAnime;
+  animation-duration:5s;
+  animation-fill-mode:forwards;
+
+  @keyframes fadeDownAnime{
+    from {
+      opacity: 0;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(100px);
+    }
 `;
 
 export default Main;

@@ -8,7 +8,7 @@ const Header = () => {
       <Navigation>
         <li>ストーリー</li>
         <li>ふっかつのじゅもん</li>
-        {/* パルプンテ表示して、ランダムで何か起こす*/}
+        {/* TODO パルプンテ表示して、ランダムで何か起こす*/}
         <li>？？？</li>
       </Navigation>
     </StyledHeader>

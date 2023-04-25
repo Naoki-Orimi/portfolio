@@ -9,7 +9,7 @@ const Footer = () => {
     );
   };
 
-const StyledFooter = styled.header`
+const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
