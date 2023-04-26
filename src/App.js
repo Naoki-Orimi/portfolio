@@ -4,7 +4,12 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import styled from "styled-components";
-
+import {
+  createBrowserRouter,
+  RouterProvider,
+  // Router,
+  Link,
+} from "react-router-dom";
 import './App.css';
 
 function App() {
