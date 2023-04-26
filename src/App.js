@@ -1,27 +1,22 @@
 import logo from './logo.svg';
-import { BrowserRouter as Router, Routes, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import styled from "styled-components";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  // Router,
-  Link,
-} from "react-router-dom";
-import './App.css';
 
 function App() {
   return (
     <div className='App'>
-      <Router>
-        <StyledApp>
-            <Header />
-              <Main />
-            <Footer />
-        </StyledApp>
-      </Router>
+      <StyledApp>
+        <Header />
+          <BrowserRouter>
+            <Routes>
+                <Route path="/" Component={Main} />
+            </Routes>
+          </BrowserRouter>
+        <Footer />
+    </StyledApp>
     </div>
   );
 }
