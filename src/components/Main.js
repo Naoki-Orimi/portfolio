@@ -1,9 +1,27 @@
-import React from "react";
+import React, {useEffect, useState, useRef} from "react";
 import styled from "styled-components";
 import Portfolio from "../assets/img/Portfolio.png";
 import SelectModal from "./SelectModal";
 
 const Main = () => {
+
+  const [show, setShow] = useState(false);
+  // const domRef = useRef<HTMLInputElement>(null);
+  const mainRef = useRef(null);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true);
+      console.log("test");
+    },5000);
+
+    if (show) {
+      console.log("レンダリング後5秒後にモーダルを表示させる！");
+      // TODO: useRef操作だと、表示に味がない…
+      mainRef.current.style.visibility = "";
+    }
+  }, [show]);
+
   return (
     <StyledMain>
       <Message>テストテスト</Message>
@@ -12,8 +30,10 @@ const Main = () => {
         <img src={Portfolio}></img>
       </Heading>
       {/* TODO もーだる自体の表示もタイトルが出た後に出す */}
-      <SelectModal>
-      </SelectModal>
+      <div className="selectModal" ref={mainRef} style={{ visibility: "hidden" }}>
+        <SelectModal>
+        </SelectModal>
+      </div>
     </StyledMain>
   );
 };
