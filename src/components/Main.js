@@ -6,13 +6,11 @@ import SelectModal from "./SelectModal";
 const Main = () => {
 
   const [show, setShow] = useState(false);
-  // const domRef = useRef<HTMLInputElement>(null);
   const mainRef = useRef(null);
 
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-      console.log("test");
     },5000);
 
     if (show) {
