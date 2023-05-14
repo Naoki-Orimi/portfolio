@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom';
 import Header from './components/Header';
 import Main from './components/Main';
+import Start from './components/Start';
+import Status from './components/Status';
 import Footer from './components/Footer';
 import styled from "styled-components";
 
@@ -13,6 +15,8 @@ function App() {
           <BrowserRouter>
             <Routes>
                 <Route path="/" Component={Main} />
+                <Route path="/start" Component={Start} />
+                <Route path="/status" Component={Status} />
             </Routes>
           </BrowserRouter>
         <Footer />

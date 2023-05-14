@@ -11,10 +11,10 @@ const Main = () => {
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    },5000);
+    },4000);
 
     if (show) {
-      console.log("レンダリング後5秒後にモーダルを表示させる！");
+      console.log("レンダリング後4秒後にモーダルを表示させる！");
       // TODO: useRef操作だと、表示に味がない…
       mainRef.current.style.visibility = "";
     }
