@@ -7,23 +7,26 @@ import {
     RouterProvider,
     Route,
     Link,
-  } from "react-router-dom";
+} from "react-router-dom";
 
 const SelectModal = () => {
   return (
     <StyledSelectModal>
         {/* TODO ▶︎ の部分はカーソルのforcusでつくようにする */}
         <div><Link className="start" to="/start">  ▶︎ 冒険をはじめる</Link></div>
+
         <div><Link className="status" to="/status">▶︎ つよさを見る</Link></div>
     </StyledSelectModal>
   );
 };
 
-const StyledSelectModal = styled.main`
+const StyledSelectModal = styled.main
+`
     color: white;
     & a {
         color: white;
-        paddinf-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 `
 

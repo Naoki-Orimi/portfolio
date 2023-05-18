@@ -1,10 +1,18 @@
 import React from "react";
 import styled from "styled-components";
+import {
+    createBrowserRouter,
+    RouterProvider,
+    Route,
+    Link,
+} from "react-router-dom";
 
 const Header = () => {
   return (
     <StyledHeader>
-      <Title>DQ風サイト</Title>
+      <Title>
+            <a href="/" style={{"text-decoration": "none", "color": "inherit", "cursor": "default"}}>Portfolio Top</a>
+        </Title>
       <Navigation>
         <li>ストーリー</li>
         <li>ふっかつのじゅもん</li>
